@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+
+public class PlayerData:MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int level;
+    public new string name;
+    public Inventory inventory;
+
+    private void Update()
     {
-        
+        LvlUp();
     }
 
-    // Update is called once per frame
-    void Update()
+    void LvlUp()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            level++;
+        }
     }
+
 }
