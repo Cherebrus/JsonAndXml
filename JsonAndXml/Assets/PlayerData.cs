@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerData:MonoBehaviour
+public class PlayerData : MonoBehaviour
 {
     public int level;
     public new string name;
     public Inventory inventory;
 
-    private void Update()
+
+     public void LvlUp()
     {
-        LvlUp();
+
+        level++;
+
+        Debug.Log("You Level Up your level is: " + level);
+
     }
 
-    void LvlUp()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            level++;
-        }
-    }
-
+    
 }
+
