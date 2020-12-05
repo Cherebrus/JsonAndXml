@@ -13,10 +13,11 @@ public class Json : MonoBehaviour
     string json;
     string jsonPeth = "/Json/Save Game.Json";
 
-
+    
     private void Start()
     {
         playerData.level = 0;
+        CreatFolder();
     }
 
     private void Update()
@@ -52,6 +53,14 @@ public class Json : MonoBehaviour
         }
     }
 
+
+    void CreatFolder()
+    {
+        if (!Directory.Exists(Application.dataPath + "/Json"))
+        {
+            Directory.CreateDirectory(Application.dataPath + "/Json");
+        }
+    }
     
 
     
